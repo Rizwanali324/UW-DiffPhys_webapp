@@ -47,7 +47,7 @@ def run_inference():
     # Construct the command with the given arguments
     command = [
         "python", "./inference_UW-DDIM.py",
-        "--config", "........../configs/underwater_lsui_uieb_128.yml",
+        "--config", "./underwater_lsui_uieb_128.yml",
         "--resume", "/content/Checkpoints",
         "--sampling_timesteps", "25",
         "--eta", "0",
