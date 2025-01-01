@@ -14,7 +14,7 @@ public_url = ngrok.connect(5000)
 print(f"Flask app is live at {public_url}")
 
 # Directory where results will be saved
-output_dir = '/results'
+output_dir = './results'
 
 # Allowed image extensions
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -46,8 +46,8 @@ def run_inference():
     
     # Construct the command with the given arguments
     command = [
-        "python", "/inference_UW-DDIM.py",
-        "--config", "/configs/underwater_lsui_uieb_128.yml",
+        "python", "./inference_UW-DDIM.py",
+        "--config", "........../configs/underwater_lsui_uieb_128.yml",
         "--resume", "/content/Checkpoints",
         "--sampling_timesteps", "25",
         "--eta", "0",
