@@ -41,13 +41,13 @@ def run_inference():
         return jsonify({'error': 'Invalid image format. Allowed formats are PNG, JPG, JPEG.'}), 400
     
     # Save the uploaded image
-    image_path = f"/content/UW-DiffPhys/{image_file.filename}"
+    image_path = f"/content/UW-DiffPhys_webapp/{image_file.filename}"
     image_file.save(image_path)
     
     # Construct the command with the given arguments
     command = [
-        "python", "/content/UW-DiffPhys/inference_UW-DDIM.py",
-        "--config", "/content/UW-DiffPhys/configs/underwater_lsui_uieb_128.yml",
+        "python", "/content/UW-DiffPhys_webapp/inference_UW-DDIM.py",
+        "--config", "/content/UW-DiffPhys_webapp/configs/underwater_lsui_uieb_128.yml",
         "--resume", "/content/Checkpoints",
         "--sampling_timesteps", "25",
         "--eta", "0",
